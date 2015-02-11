@@ -1,0 +1,11 @@
+Hoi {{ user.firstname }},
+
+Iemand heeft je een verhaal verteld. Lees het snel en vertel het door!
+
+{{ url_for('login', _external=True) }}
+
+(Login met je voornaam: {{ user.firstname }} en als wachtwoord: {{ user.password }})
+
+Groeten,
+
+Het ketting-vertellingteam (Folgert)

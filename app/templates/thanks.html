@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="instruction">
+    {% if lastone %}
+    <p>Dit was de laatste. Dank voor al je hulp!</p>
+    {% else %}
+    <p>Jouw verhaal wordt nu doorverteld. Binnenkort krijg je weer een nieuwe te horen.</p>
+    {% endif %}
+  </div>
+{% endblock %}

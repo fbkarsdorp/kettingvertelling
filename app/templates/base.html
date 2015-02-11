@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>{{ title }} narrative experiment</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <base href="/">
+   <link rel="stylesheet" href="static/css/normalize.css">
+   <link rel="stylesheet" href="static/css/main.css">
+   <link rel="stylesheet" href="static/css/styles.css">
+  </head>
+  <body>
+  <div class="wrapper">
+  <header>
+  <h1>Kettingvertelling</h1>
+  </header>
+   <section>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+   </section>
+
+   <footer>
+    This experiment is maintained and executed by Folgert Karsdorp<br>
+    For more information send an e-mail to: folgert DOT karsdorp AT meertens DOT knaw DOT nl
+   </footer>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+     {% if story %}
+     <div class="instruction">
+     <p>Hoi {{ user.firstname }}, lees het volgende verhaal aandachtig door.</p>
+     </div>
+
+     <div class="contents">
+       <p>{{ story.story }}</p>
+     </div>
+
+     <div class="instruction">
+      <p>Heb je het verhaal goed gelezen? Klik dan op de volgende link en vertel door:
+        <a href="{{ url_for('retell', storyname=story.storyname) }}">hervertel!</a>
+      </p>
+     </div>
+   
+     {% else %}
+
+     <div class="instruction">
+     <p>Sorry {{ user.firstname }}, er zijn geen verhalen voor je. Let op je inbox. Er komt snel een mail.</p>
+     </div>
+
+     {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="instruction">
+    <p>Vertel het verhaal door in het onderstaande tekstvak.</p>
+  </div>
+
+  <div class="story">
+    <form method="POST" action="", name="retell">
+      {{ form.hidden_tag() }}
+      <div id="story">
+         {{ form.text(size=10000) }}
+      </div>
+      <p class="submit"><input type="submit" value="vertel door"></p>
+    </form>
+  </div>
+{% endblock %}
